@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajkumar Bhuva - Software Engineer Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 3px;
+            margin: 4px auto;
+            background-color: #f59e0b; /* Amber-500 */
+            transition: all 0.3s ease-in-out;
+        }
+        /* Animation for when the menu is open (optional but nice) */
+        .hamburger.open .line-top {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.open .line-middle {
+            opacity: 0;
+        }
+        .hamburger.open .line-bottom {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-20 bg-gray-900/50 backdrop-blur-md shadow-xl border-b border-amber-800/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#hero" class="text-3xl font-extrabold tracking-tight text-amber-400 hover:text-amber-300 transition duration-150">
+                    Rajkumar Bhuva
+                </a>
+                
+                <nav class="hidden md:flex space-x-10 font-medium">
+                    <a href="#about" class="text-gray-300 hover:text-amber-400 transition duration-150">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-amber-400 transition duration-150">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-amber-400 transition duration-150">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-amber-400 transition duration-150">Contact</a>
+                </nav>
+
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition duration-150 z-30" aria-label="Toggle Menu">
+                    <div class="hamburger" id="hamburger-icon">
+                        <span class="hamburger-line line-top"></span>
+                        <span class="hamburger-line line-middle"></span>
+                        <span class="hamburger-line line-bottom"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+        <nav id="mobile-menu" 
+            class="hidden md:hidden absolute top-20 left-0 w-full 
+                frosted-glass bg-gray-800 border-t border-b border-gray-700/80 /* ADDED FROSTED-GLASS AND ADJUSTED BORDER */
+                py-4 z-10"
+        >
+            <div class="flex flex-col space-y-3 px-4 text-center font-medium">
+                <a href="#about" class="text-gray-300 hover:text-amber-400 transition duration-150 py-2">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-amber-400 transition duration-150 py-2">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-amber-400 transition duration-150 py-2">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-amber-400 transition duration-150 py-2">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        <section id="hero" class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 text-center bg-transparent">
+            <div class="max-w-5xl mx-auto frosted-glass p-8 md:p-12 rounded-3xl shadow-3xl">
+                <div class="w-80 h-80 overflow-hidden rounded-[5%] mx-auto mb-8 border border-amber-400 shadow-2xl shadow-amber-500/50">
+                    <img 
+                        src="assets\Raj_profile.png" 
+                        alt="Rajkumar Bhuva Profile Picture" 
+                        class="w-full h-full object-cover object-top scale-[1.8] top-[100px] relative"
+                        onerror="this.onerror=null;this.src='https://placehold.co/160x160/1f2937/d1d5db?text=RB';"
+                    >
+                </div>
+
+                <p class="text-xl font-semibold text-center text-white-600 mb-2">Software Engineer | Full Stack Developer</p>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-center tracking-tighter text-white mb-6">
+                    Hi, I'm <span class="text-center text-amber-300">Rajkumar Bhuva</span>.
+                </h1>
+                <p class="text-2xl text-center text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+                    Building innovative software that turns ideas into scalable reality.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#projects" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-bold rounded-xl shadow-lg text-gray-900 bg-amber-500 hover:bg-amber-400 transition duration-300 transform hover:scale-[1.02]">
+                        View My Projects
+                    </a>
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 border-2 border-amber-500 text-lg font-medium rounded-xl text-yellow-400 bg-transparent hover:bg-amber-900/50 transition duration-300 shadow-md">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-transparent border-t border-b border-gray-800">
+            <div class="max-w-5xl mx-auto frosted-glass p-8 md:p-12 rounded-3xl shadow-3xl">
+                <h2 class="text-4xl font-extrabold text-center text-white mb-5">About Me</h2>
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    I’m a Senior Python Developer with over 4 years of experience designing scalable backend systems, APIs, and real-time data pipelines using Python, Django, Flask, React, Kafka, and AWS. I’m passionate about building high-performance, cloud-native applications that combine clean architecture with practical impact. At eBay, I developed distributed data solutions processing millions of daily events and automated CI/CD workflows to accelerate releases. With a Master’s in Computer Science from NJIT (GPA 3.83), I thrive on solving complex technical challenges and creating intelligent, data-driven solutions that make a real difference.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-transparent border-t border-gray-800">
+        <div class="max-w-5xl mx-auto frosted-glass p-10 md:p-14 rounded-3xl shadow-3xl">
+
+            <div class="flex justify-center gap-4 mb-12 flex-wrap">
+            <button id="skillsTab" class="tab-btn active-tab px-6 py-2 rounded-full bg-gradient-to-r from-yellow-500 to-amber-600 text-gray-900 font-semibold shadow-lg shadow-yellow-500/40 transition-all duration-300">Skills</button>
+            <button id="experienceTab" class="tab-btn px-6 py-2 rounded-full bg-[#2a2a3e] text-gray-300 hover:bg-gradient-to-r hover:from-amber-500 hover:to-yellow-600 transition-all duration-300">Experience</button>
+            <button id="educationTab" class="tab-btn px-6 py-2 rounded-full bg-[#2a2a3e] text-gray-300 hover:bg-gradient-to-r hover:from-amber-500 hover:to-yellow-600 transition-all duration-300">Education</button>
+            </div>
+
+            <div id="skillsContent" class="tab-content block space-y-6 text-gray-300">
+                
+                <div class="space-y-4">
+                    <h3 class="text-yellow-400 font-bold text-2xl mb-2">Programming Languages & Core Tech</h3>
+                    <p class="text-gray-400">The foundational languages, databases, and general utilities I use daily.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">Python</span>
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">Java</span>
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">JavaScript</span>
+                        <span class="skill-tag bg-blue-900/60 text-blue-400">SQL</span>
+                        <span class="skill-tag bg-blue-900/60 text-blue-400">PostgreSQL</span>
+                        <span class="skill-tag bg-blue-900/60 text-blue-400">MongoDB</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">HTML</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">CSS</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 pt-6 border-t border-gray-800">
+                    <h3 class="text-yellow-400 font-bold text-2xl mb-2">Web & Application Frameworks</h3>
+                    <p class="text-gray-400">Frameworks and libraries for scalable front-end and back-end application development.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">Django</span>
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">Flask</span>
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">React</span>
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">Redux / Flux</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">Node.js</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">jQuery / Axios</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">Celery / Flower</span>
+                    </div>
+                </div>
+
+                <div class="space-y-4 pt-6 border-t border-gray-800">
+                    <h3 class="text-yellow-400 font-bold text-2xl mb-2">Data Engineering & Machine Learning</h3>
+                    <p class="text-gray-400">Tools and technologies for large-scale data processing and model integration.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="skill-tag bg-green-900/60 text-green-400">PySpark / Hadoop (MapReduce)</span>
+                        <span class="skill-tag bg-green-900/60 text-green-400">Kafka</span>
+                        <span class="skill-tag bg-green-900/60 text-green-400">Scikit-Learn / TensorFlow</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">NumPy / Pandas</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">ETL Pipelines</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 pt-6 border-t border-gray-800">
+                    <h3 class="text-yellow-400 font-bold text-2xl mb-2">Cloud Infrastructure & DevOps</h3>
+                    <p class="text-gray-400">Cloud platforms, containerization, and automation tools.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">AWS (EC2, S3, Lambda, Redshift, Kinesis)</span>
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">Docker</span>
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">Kubernetes</span>
+                        <span class="skill-tag bg-amber-900/50 text-amber-300">Jenkins / CI/CD</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">Git / SVN</span>
+                    </div>
+                </div>
+
+                <div class="space-y-4 pt-6 border-t border-gray-800">
+                    <h3 class="text-yellow-400 font-bold text-2xl mb-2">Development Practices & Security</h3>
+                    <p class="text-gray-400">Methodologies for secure, high-quality, and collaborative software development.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="skill-tag bg-red-900/60 text-red-400">Agile (Scrum)</span>
+                        <span class="skill-tag bg-red-900/60 text-red-400">Test-Driven Development (TDD)</span>
+                        <span class="skill-tag bg-red-900/60 text-red-400">JWT / OAuth</span>
+                        <span class="skill-tag bg-gray-700/60 text-gray-300">WebSocket</span>
+                    </div>
+                </div>
+
+            </div>           
+
+            <div id="experienceContent" class="tab-content hidden space-y-6 text-gray-300">
+                <div>
+                    <h3 class="text-yellow-400 font-bold text-xl mb-1">Sr. Python Developer - eBay</h3>
+                    <p class="text-sm font-light text-gray-400 mb-3">Apr 2023 – Current | San Jose, CA</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-300 text-base">
+                        <li>Built a real-time data pipeline using Kafka and PySpark processing 10M+ daily events, cutting manual reporting time by 50%.</li>
+                        <li>Deployed and scaled microservices with Docker & Kubernetes, reducing downtime incidents by 40%.</li>
+                        <li>Automated CI/CD pipelines with Jenkins and Git, reducing release cycle time by 30%.</li>
+                        <li>Optimized PostgreSQL queries, improving data retrieval speeds by 35% and accelerating decision-making.</li>
+                        <li>Implemented Celery with Celery Beat for asynchronous data processing and Flower for monitoring distributed tasks, reducing system load by 30%.</li>
+                        <li>Developed an interactive React & Redux dashboard for visualizing pipeline metrics and real-time analytics with WebSocket updates, improving data accessibility for non-technical teams.</li>
+                        <li>Designed and consumed RESTful APIs with Django and Node.js for integration with React applications, ensuring seamless front-to-back communication.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-yellow-400 font-bold text-xl mb-1">Python Developer - Infosys</h3>
+                    <p class="text-sm font-light text-gray-400 mb-3">Mar 2021 - Jun 2022 | Remote</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-300 text-base">
+                        <li>Developed REST APIs with Django secured with JWT and OAuth, supporting 5 client applications.</li>
+                        <li>Integrated ML models with Scikit-Learn into BI tools, boosting forecasting accuracy by 30%.</li>
+                        <li>Designed a data repository consolidating 20+ sources, improving reporting accuracy and reducing query latency by 45%.</li>
+                        <li>Managed cloud infrastructure with AWS (EC2, S3, RDS) and streamlined deployments with Docker and Jenkins.</li>
+                        <li>Enhanced frontend integration using Bootstrap and jQuery for dynamic reporting dashboards.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="educationContent" class="tab-content hidden space-y-6 text-gray-300">
+            <div>
+                <h3 class="text-amber-400 font-bold text-xl mb-1">M.S. in Computer Science - NJIT</h3>
+                <h3 class="text-amber-400 font-bold text-xl mb-1">Aug 2022 - May 2024</h3>
+                <p>Graduated with a GPA of 3.83, specializing in Data Engineering, Cloud Computing, and Machine Learning.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-400 font-bold text-xl mb-1">B.E. in Aeronautical Engineering - SVIT </h3>
+                <h3 class="text-amber-400 font-bold text-xl mb-1">Aug 2017 - May 2021</h3>
+                <p>Graduated with a GPA of 3.18, focusing on aircraft design, propulsion systems, and aerodynamics.</p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
+            <h2 class="text-4xl font-extrabold text-center text-white mb-16">My Expertise</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                
+                <div class="frosted-glass p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-4 flex items-center gap-3">
+                    <img src="assets/Full.png" alt="Full Stack Icon" class="h-8 w-8 opacity-90 icon-invert hover:opacity-100">
+                    Full Stack Development
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Expertise in building responsive, user-centric web applications using React, Redux, Django, and Flask. Skilled in RESTful API design and integration, UI/UX optimization, and implementing scalable, cloud-ready architectures that enhance performance and user engagement.
+                    </p>
+                </div>
+
+                <div class="frosted-glass p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-4 flex items-center gap-3">
+                        <img src="assets\Backend.png" alt="Backend Icon" class="h-8 w-8 opacity-80 icon-invert hover:opacity-100">
+                        Backend & Data Engineering
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Specialized in backend engineering and data processing, building resilient REST APIs and real-time ETL pipelines with Kafka and PySpark. Proficient in optimizing PostgreSQL and MongoDB for high availability, scalability, and low-latency data workflows in production environments.
+                    </p>
+                </div>
+                
+                <div class="frosted-glass p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-4 flex items-center gap-3">
+                        <img src="assets\Cloud.png" alt="Cloud Icon" class="h-8 w-8 opacity-80 icon-invert hover:opacity-100">
+                        Cloud & DevOps
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Proficient in architecting and deploying cloud-native applications using AWS (EC2, S3, Lambda). Experienced in containerization and orchestration through Docker and Kubernetes, and in implementing robust CI/CD automation with Jenkins to streamline software delivery and infrastructure scaling.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-transparent border-t border-b border-gray-800">
+            <h2 class="text-4xl font-extrabold text-center text-white mb-16">
+                My Projects
+            </h2>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="project-card frosted-glass rounded-2xl p-6">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-2">AI-Powered Task Queue Manager</h3>
+                    <p class="text-gray-400 mb-4 text-sm project-description">
+                        A Python-based task manager built on Django and Celery, designed to solve resource contention by using a simple AI model to dynamically prioritize asynchronous job queues. This system minimizes processing latency and maximizes overall system throughput by efficiently allocating resources based on task complexity.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="project-tag bg-gray-700/60 text-gray-300">Python</span>
+                        <span class="project-tag bg-amber-900/60 text-amber-400">Django</span>
+                        <span class="project-tag bg-red-900/60 text-red-400">ML</span>
+                        <span class="project-tag bg-green-900/60 text-green-400">Celery</span>
+                    </div>
+                    <a href="https://github.com/rajbhuva1130/AI-Powered-Task-Queue-Manager" target="_blank" class="project-link text-yellow-400 hover:text-yellow-300">
+                        View Project →
+                    </a>
+                </div>
+
+                <div class="project-card frosted-glass rounded-2xl p-6">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-2">PWA AI (Progressive Web App)</h3>
+                    <p class="text-gray-400 mb-4 text-sm project-description">
+                        A fully featured Progressive Web Application (PWA) built with React and JavaScript to deliver a reliable, app-like experience. It includes robust service workers for offline support and integrates a client-side AI chatbot to provide interactive assistance, significantly boosting user engagement and accessibility.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="project-tag bg-amber-900/60 text-amber-400">React</span>
+                        <span class="project-tag bg-blue-900/60 text-blue-400">PWA</span>
+                        <span class="project-tag bg-gray-700/60 text-gray-300">JavaScript</span>
+                        <span class="project-tag bg-red-900/60 text-red-400">AI Chatbot</span>
+                    </div>
+                    <a href="https://github.com/rajbhuva1130/pwa-ai" target="_blank" class="project-link text-yellow-400 hover:text-yellow-300">
+                        View Project →
+                    </a>
+                </div>
+
+                <div class="project-card frosted-glass rounded-2xl p-6">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-2">VideoHub (Video Streaming Platform)</h3>
+                    <p class="text-gray-400 mb-4 text-sm project-description">
+                        A full-stack video streaming and sharing platform using the MERN stack (MongoDB, Express, React, Node.js) model. It features complete user lifecycle management, secure JWT authentication, and efficient backend handling for video uploads and playback, similar to popular video services.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="project-tag bg-gray-700/60 text-gray-300">Node.js</span>
+                        <span class="project-tag bg-amber-900/60 text-amber-400">React</span>
+                        <span class="project-tag bg-blue-900/60 text-blue-400">PostgreSQL</span>
+                        <span class="project-tag bg-red-900/60 text-red-400">JWT Auth</span>
+                    </div>
+                    <a href="https://github.com/rajbhuva1130/Videohub" target="_blank" class="project-link text-yellow-400 hover:text-yellow-300">
+                        View Project →
+                    </a>
+                </div>
+
+                <div class="project-card frosted-glass rounded-2xl p-6">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-2">TurtleBack Zoo Management</h3>
+                    <p class="text-gray-400 mb-4 text-sm project-description">
+                        A secure enterprise management application built with Java and Spring Boot. The system effectively handles complex operations including visitor ticketing, real-time animal inventory tracking, and employee resource scheduling, all backed by a relational SQL database for data integrity.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="project-tag bg-gray-700/60 text-gray-300">Python</span>
+                        <span class="project-tag bg-red-900/60 text-red-400">Django</span>
+                        <span class="project-tag bg-blue-900/60 text-blue-400">PostgreSQL</span>
+                        <span class="project-tag bg-amber-900/60 text-amber-400">Enterprise Mgmt</span>
+                    </div>
+                    <a href="https://github.com/rajbhuva1130/TurtleBackZoo" target="_blank" class="project-link text-yellow-400 hover:text-yellow-300">
+                        View Project →
+                    </a>
+                </div>
+
+                <div class="project-card frosted-glass rounded-2xl p-6">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-2">Treap (Randomized Binary Search Tree)</h3>
+                    <p class="text-gray-400 mb-4 text-sm project-description">
+                        A fundamental implementation of a Treap (a data structure combining a Binary Search Tree with a Heap for priority management) written in Java. This project demonstrates a deep understanding of complex randomized algorithms and efficient data organization for fast search and insertion operations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="project-tag bg-gray-700/60 text-gray-300">Java</span>
+                        <span class="project-tag bg-red-900/60 text-red-400">Algorithms</span>
+                        <span class="project-tag bg-red-900/60 text-red-400">Data Structures</span>
+                    </div>
+                    <a href="https://github.com/rajbhuva1130/Treap" target="_blank" class="project-link text-yellow-400 hover:text-yellow-300">
+                        View Project →
+                    </a>
+                </div>
+
+                <div class="project-card frosted-glass rounded-2xl p-6">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-2">Dosa Restaurant API</h3>
+                    <p class="text-gray-400 mb-4 text-sm project-description">
+                        A robust, production-ready RESTful API developed using Python/Django framework. This serves as the scalable backend for a restaurant, handling critical operations like menu management, order placement, secure user accounts, and inventory synchronization with a PostgreSQL database.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="project-tag bg-gray-700/60 text-gray-300">Python</span>
+                        <span class="project-tag bg-blue-900/60 text-blue-400">REST API</span>
+                        <span class="project-tag bg-blue-900/60 text-blue-400">SQL</span>
+                    </div>
+                    <a href="https://github.com/rajbhuva1130/Dosa_Restaurant_API" target="_blank" class="project-link text-yellow-400 hover:text-yellow-300">
+                        View Project →
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                   <a href="https://github.com/rajbhuva1130?tab=repositories" target="_blank" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-bold rounded-xl shadow-lg text-gray-900 bg-amber-600 hover:bg-amber-700 transition duration-300 transform hover:scale-[1.05]">
+                    View All Repositories 
+                    <img src="assets\Github.png" alt="GitHub Icon" class="h-8 w-8 opacity-80 hover:opacity-100">
+                </a>
+            </div>
+
+        </section>
+
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 text-center bg-transparent">
+            <h2 class="text-4xl font-extrabold text-white mb-6">Let's Connect</h2>
+            <p class="text-lg text-center text-gray-400 max-w-5xl mx-auto mb-12">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+
+            <div class="max-w-5xl mx-auto frosted-glass p-8 rounded-3xl shadow-2xl"> <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+                    
+                    <div>
+                        <h3 class="text-2xl text-center font-bold text-yellow-300 mb-6">Send Me a Message</h3>
+                        <form action="https://formspree.io/f/xjkaakew" method="POST" class="space-y-6" id="contactForm">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                                <input type="text" name="name" id="name" required 
+                                        class="contact-input w-full px-4 py-3 bg-gray-800/30 border border-gray-700/80 rounded-lg text-white focus:border-yellow-500 focus:ring-yellow-500 transition duration-150">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+                                <input type="email" name="_replyto" id="email" required 
+                                        class="contact-input w-full px-4 py-3 bg-gray-800/30 border border-gray-700/80 rounded-lg text-white focus:border-yellow-500 focus:ring-yellow-500 transition duration-150">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+                                <textarea name="message" id="message" rows="5" required 
+                                          class="contact-input w-full px-4 py-3 bg-gray-800/30 border border-gray-700/80 rounded-lg text-white focus:border-yellow-500 focus:ring-yellow-500 transition duration-150"></textarea>
+                            </div>
+
+                            <button type="submit" 
+                                    class="contact-submit-button w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-lg font-bold rounded-xl shadow-lg text-gray-900">
+                                Send Message
+                            </button>
+                            <div id="formStatus" class="mt-4 text-sm font-medium text-center hidden"></div>
+                        </form>
+                    </div>
+
+                    <div class="md:border-l md:border-gray-700 md:pl-10 pt-4 md:pt-0">
+                        <h3 class="text-2xl font-bold text-center text-yellow-300 mb-6">Contact Information</h3>
+
+                        <div class="space-y-6 text-center flex flex-col items-center">
+
+                            <div class="flex items-center space-x-4 justify-center">
+                            <img src="assets\mail.png" alt="Mail Icon" class="h-8 w-8 flex-shrink-0 icon-invert opacity-70">
+                            <div>
+                                <p class="text-sm text-center text-gray-400">Email Address</p>
+                                <a href="mailto:rrb.bhuva@gmail.com"
+                                class="text-lg text-gray-300 hover:text-yellow-400 transition duration-150 font-medium">
+                                rrb.bhuva@gmail.com
+                                </a>
+                            </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 justify-center">
+                            <img src="assets\call.png" alt="Call Icon" class="h-8 w-8 flex-shrink-0 icon-invert opacity-70">
+                            <div>
+                                <p class="text-sm text-center text-gray-400">Phone Number</p>
+                                <a href="tel:+1346501130"
+                                class="text-lg text-gray-300 hover:text-yellow-400 transition duration-150 font-medium">
+                                +1 (346)-501-1130
+                                </a>
+                            </div>
+                            </div>
+
+                            <div class="pt-4 border-t border-gray-800 text-center">
+                            <p class="text-sm text-gray-400 mb-3">Connect Online</p>
+                            <div class="flex justify-center space-x-6">
+
+                                <a href="https://www.linkedin.com/in/rajkumar-bhuva" target="_blank" class="social-icon-link">
+                                <img src="assets\linkedin.png" alt="LinkedIn Icon"
+                                    class="h-8 w-8 opacity-80 hover:opacity-100 icon-invert transition duration-150 transform hover:scale-[1.2]">
+                                </a>
+
+                                <a href="https://github.com/rajbhuva1130" target="_blank" class="social-icon-link">
+                                <img src="assets\Github.png" alt="GitHub Icon"
+                                    class="h-8 w-8 opacity-80 hover:opacity-100 icon-invert transition duration-150 transform hover:scale-[1.2]">
+                                </a>
+                            </div>
+                            </div>
+
+                            <a href="assets\Rajkumar_Bhuva_Resume.docx"
+                            class="download-cv-button inline-flex items-center text-yellow-400 hover:text-yellow-300 transition duration-150 font-medium border border-yellow-500/70 px-4 py-2 rounded-lg mt-4 bg-gray-900/50 hover:bg-gray-900/80">
+                            <img src="assets\Download.png" alt="Download Icon" class="h-5 w-5 mr-2 icon-invert opacity-90">
+                            Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="mt-16 py-8 border-t border-gray-800 bg-gray-900/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p class="text-center">&copy; 2024 Rajkumar Bhuva. Made with 💙 and Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const header = document.querySelector('header');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('open');
+            // Increase z-index of the header when menu is open to ensure menu covers content below
+            if (!mobileMenu.classList.contains('hidden')) {
+                header.classList.add('z-50');
+            } else {
+                header.classList.remove('z-50');
+            }
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMenu);
+
+        // Close menu when a link is clicked (for better mobile UX)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Formspree submission handling (existing logic)
+        window.onload = function() {
+            const tabs = document.querySelectorAll(".tab-btn");
+            const contents = document.querySelectorAll(".tab-content");
+            tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                // Remove existing active styling from all tabs
+                tabs.forEach(t => {
+                    t.classList.remove("bg-gradient-to-r", "from-yellow-500", "to-amber-600", "text-gray-900", "font-semibold", "shadow-lg", "shadow-yellow-500/40");
+                    // Ensure hover style is correctly reset
+                    t.classList.add("bg-[#2a2a3e]", "text-gray-300");
+                });
+                
+                // Set the clicked tab as active
+                tab.classList.remove("bg-[#2a2a3e]", "text-gray-300");
+                tab.classList.add("bg-gradient-to-r", "from-yellow-500", "to-amber-600", "text-gray-900", "font-semibold", "shadow-lg", "shadow-yellow-500/40");
+                
+                contents.forEach(c => c.classList.add("hidden"));
+                document.getElementById(tab.id.replace("Tab", "Content")).classList.remove("hidden");
+            });
+            });
+            const form = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const data = new FormData(form);
+                
+                // Show loading/sending status
+                formStatus.classList.remove('hidden', 'text-red-500', 'text-green-500');
+                formStatus.classList.add('text-yellow-500'); 
+                formStatus.textContent = 'Sending message...';
+
+                fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        formStatus.classList.remove('text-yellow-500');
+                        formStatus.classList.add('text-green-500');
+                        formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+                        form.reset();
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+                            } else {
+                                formStatus.textContent = 'Oops! There was an error sending your message.';
+                            }
+                            formStatus.classList.remove('text-yellow-500');
+                            formStatus.classList.add('text-red-500');
+                        })
+                    }
+                }).catch(error => {
+                    formStatus.classList.remove('text-yellow-500');
+                    formStatus.classList.add('text-red-500');
+                    formStatus.textContent = 'Network error. Please try again later.';
+                });
+            });
+        };
+    </script>
+</body>
+</html>

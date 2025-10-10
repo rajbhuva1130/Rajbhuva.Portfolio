@@ -1,0 +1,97 @@
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  background: #0d0d0d;
+  color: #e5e7eb;
+}
+
+/* Gradient background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(41,192,92,0.3) 25%, rgba(13,13,13,0.95) 70%),
+              radial-gradient(circle at 90% 80%, rgba(6,46,56,0.2) 0%, rgba(13,13,13,0.95) 70%);
+  z-index: -1;
+}
+
+/* Frosted glass effect */
+.frosted-glass {
+  background-color: rgba(101,98,98,0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(75,85,99,0.4);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Icon invert */
+.icon-invert {
+  filter: invert(100%) sepia(10%) saturate(100%) hue-rotate(180deg) brightness(100%) contrast(100%);
+}
+
+/* Project and skill tags */
+.skill-tag, .project-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+}
+
+/* Contact input styles - UPDATED */
+.contact-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(75,85,99,0.5);
+  border-radius: 8px;
+  background-color: rgba(31,41,55,0.4);
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.contact-input:focus {
+  /* Changed from Teal/Indigo to Yellow-500 */
+  border-color: #f59e0b; /* Tailwind yellow-500 */
+  box-shadow: 0 0 0 1px #f59e0b;
+}
+
+/* Submit button - UPDATED */
+.contact-submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  /* Changed from Teal/Indigo to Amber-500 */
+  background-color: #f59e0b; /* Tailwind amber-500 */
+  color: #0f172a;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.contact-submit-button:hover {
+  /* Changed from Teal/Indigo to Amber-400 */
+  background-color: #fbbf24; /* Tailwind amber-400 */
+  transform: scale(1.02);
+}
+
+/* Responsive text */
+h1, h2, h3 {line-height: 1.2; }
+
+p { text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6; }
+
+@media (max-width: 640px) {
+  p { font-size: 0.95rem; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.projects-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px #fbbf24;
+}
