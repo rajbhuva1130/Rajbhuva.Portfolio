@@ -10,7 +10,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 10% 20%, rgba(41,192,92,0.3) 25%, rgba(13,13,13,0.95) 70%),
+  background: radial-gradient(circle at 10% 20%, rgba(15, 116, 49, 0.3) 25%, rgba(13,13,13,0.95) 70%),
               radial-gradient(circle at 90% 80%, rgba(6,46,56,0.2) 0%, rgba(13,13,13,0.95) 70%);
   z-index: -1;
 }
